@@ -6,7 +6,7 @@
 /*   By: pbeheyt <pbeheyt@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/09 11:47:15 by pbeheyt           #+#    #+#             */
-/*   Updated: 2022/05/20 04:51:35 by pbeheyt          ###   ########.fr       */
+/*   Updated: 2022/05/20 06:09:03 by pbeheyt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	print_args(va_list args, const char *format, int *len)
 	else if (*format == 'd')
 		ft_putnbr(va_arg(args, int), len);
 	else if (*format == 'i')
-		ft_putnbr(va_arg(args, int), len);
+		ft_putnbr_u(va_arg(args, int), len);
 	else if (*format == 'u')
 		ft_putnbr(va_arg(args, unsigned long long), len);
 	else if (*format == 'x')
@@ -42,6 +42,11 @@ int	ft_printf(const char *format, ...)
 
 	len = 0;
 	va_start(args, format);
+	if (!format)
+	{
+		write(1, "(null)", 6);
+		return (6);
+	}
 	while (*format)
 	{
 		if (*format == '%')
@@ -53,20 +58,20 @@ int	ft_printf(const char *format, ...)
 	va_end(args);
 	return (len);
 }
-
+/*
 int	main(void)
 {
-	// char 	*str;
+	char 	*str;
 	// char 	c;
 	
-	// str = "Salut bg";
+	str = NULL;
 	// c = 'c';
 	int	i;
 	
-	i = ft_printf(" %s", "");
-	printf(" %s", "\n----\n");
-	printf(" %s", "");
-	printf(" %s", "\n----\n");
+	i = ft_printf("%s", str);
+	printf("%s", "\n----\n");
+	printf("%s", str);
+	printf("%s", "\n----\n");
 	printf("nb caractere :%d\n", i); 
 	return(0);
-}
+}*/

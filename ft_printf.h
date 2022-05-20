@@ -6,7 +6,7 @@
 /*   By: pbeheyt <pbeheyt@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 16:11:18 by pbeheyt           #+#    #+#             */
-/*   Updated: 2022/05/20 04:41:36 by pbeheyt          ###   ########.fr       */
+/*   Updated: 2022/05/20 06:04:30 by pbeheyt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ void	ft_putchar(char c, int *len);
 void	ft_putstr(char *s, int *len);
 void	ft_putadr(void *p, int *len);
 void	ft_putnbr(int n, int *len);
+void	ft_putnbr_u(unsigned int n, int *len);
 void	ft_puthex(unsigned long long n, int *len, int type);
 
 #endif
