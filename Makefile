@@ -6,7 +6,7 @@
 #    By: pbeheyt <pbeheyt@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/31 15:08:45 by pbeheyt           #+#    #+#              #
-#    Updated: 2022/05/20 04:35:25 by pbeheyt          ###   ########.fr        #
+#    Updated: 2022/05/21 02:15:15 by pbeheyt          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,8 +16,9 @@ LIBNAME = libftprintf.a
 
 CFLAGS = -Wall -Wextra -Werror
 
-SRCS = ./ft_printf.c \
-	    ./ft_printf_print.c
+SRCS =	./ft_printf.c \
+	    ./print_nb.c \
+		./print_str.c
 
 OBJS = ${SRCS:.c=.o}
 
