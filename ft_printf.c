@@ -6,7 +6,7 @@
 /*   By: pbeheyt <pbeheyt@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/09 11:47:15 by pbeheyt           #+#    #+#             */
-/*   Updated: 2022/05/20 06:09:03 by pbeheyt          ###   ########.fr       */
+/*   Updated: 2022/05/21 02:19:43 by pbeheyt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,22 +23,21 @@ void	print_args(va_list args, const char *format, int *len)
 	else if (*format == 'd')
 		ft_putnbr(va_arg(args, int), len);
 	else if (*format == 'i')
-		ft_putnbr_u(va_arg(args, int), len);
+		ft_putnbr(va_arg(args, int), len);
 	else if (*format == 'u')
-		ft_putnbr(va_arg(args, unsigned long long), len);
+		ft_putnbr_u(va_arg(args, unsigned int), len);
 	else if (*format == 'x')
-		ft_puthex(va_arg(args, unsigned long long), len, 0);
+		ft_puthex(va_arg(args, unsigned int), len, 0);
 	else if (*format == 'X')
-		ft_puthex(va_arg(args, unsigned long long), len, 1);
+		ft_puthex(va_arg(args, unsigned int), len, 1);
 	else if (*format == '%')
 		ft_putchar('%', len);
 }
 
-
 int	ft_printf(const char *format, ...)
 {
-	int 	len;
-	va_list args;
+	int		len;
+	va_list	args;
 
 	len = 0;
 	va_start(args, format);
@@ -68,9 +67,9 @@ int	main(void)
 	// c = 'c';
 	int	i;
 	
-	i = ft_printf("%s", str);
+	i = ft_printf("%x", LONG_MAX);
 	printf("%s", "\n----\n");
-	printf("%s", str);
+	printf("%x", LONG_MAX);
 	printf("%s", "\n----\n");
 	printf("nb caractere :%d\n", i); 
 	return(0);
