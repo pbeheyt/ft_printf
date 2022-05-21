@@ -6,7 +6,7 @@
 /*   By: pbeheyt <pbeheyt@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/09 11:47:15 by pbeheyt           #+#    #+#             */
-/*   Updated: 2022/05/21 03:40:31 by pbeheyt          ###   ########.fr       */
+/*   Updated: 2022/05/21 03:58:44 by pbeheyt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,8 @@ void	print_args(va_list args, const char *format, int *len)
 		ft_puthex(va_arg(args, unsigned int), len, 1);
 	else if (*format == '%')
 		ft_putchar('%', len);
+	else
+		ft_putchar(*format, len);
 }
 
 int	ft_printf(const char *format, ...)
@@ -62,10 +64,10 @@ int	main(void)
 {
 	int	i;
 	
-		i = ft_printf("%x", INT_MAX);
+		i = ft_printf("hkhk%ykkfkf", INT_MIN);
 	printf("%s", "\n----\n");
-	printf("%x", INT_MAX);
-	printf("%s", "\n----\n");
+	// printf("%y", INT_MAX);
+	printf("%s", "\n--salut--\n");
 	printf("nb caractere :%d\n", i); 
 	return(0);
 }*/
