@@ -6,7 +6,7 @@
 /*   By: pbeheyt <pbeheyt@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/09 11:47:15 by pbeheyt           #+#    #+#             */
-/*   Updated: 2022/05/21 02:18:17 by pbeheyt          ###   ########.fr       */
+/*   Updated: 2022/05/21 03:06:55 by pbeheyt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ void	ft_putnbr_u(unsigned int n, int *len)
 	if (nl < 0)
 		return ;
 	if (nl > 9)
-		ft_putnbr(nl / 10, len);
+		ft_putnbr_u(nl / 10, len);
 	c = '0' + nl % 10;
 	write(1, &c, 1);
 	*len += 1;

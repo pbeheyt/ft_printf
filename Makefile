@@ -6,13 +6,13 @@
 #    By: pbeheyt <pbeheyt@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/31 15:08:45 by pbeheyt           #+#    #+#              #
-#    Updated: 2022/05/21 02:15:15 by pbeheyt          ###   ########.fr        #
+#    Updated: 2022/05/21 03:04:45 by pbeheyt          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-CC = gcc
-
 LIBNAME = libftprintf.a
+
+CC = gcc
 
 CFLAGS = -Wall -Wextra -Werror
 
