@@ -6,11 +6,11 @@
 #    By: pbeheyt <pbeheyt@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/31 15:08:45 by pbeheyt           #+#    #+#              #
-#    Updated: 2022/05/21 03:04:45 by pbeheyt          ###   ########.fr        #
+#    Updated: 2022/05/21 03:25:39 by pbeheyt          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-LIBNAME = libftprintf.a
+NAME = libftprintf.a
 
 CC = gcc
 
@@ -23,10 +23,10 @@ SRCS =	./ft_printf.c \
 OBJS = ${SRCS:.c=.o}
 
 
-all : EXEC
+all: $(NAME)
 
-EXEC : $(OBJS)
-	ar rcs $(LIBNAME) $(OBJS)
+$(NAME): $(OBJS)
+	ar rcs $(NAME) $(OBJS)
 
 .o : .c
 	$(CC) $(CFLAGS) -c $(SRCS) -o $@ -I ./
@@ -35,7 +35,7 @@ clean :
 	rm -f $(OBJS)
 
 fclean : clean
-	rm -f $(LIBNAME) 
+	rm -f $(NAME) 
 
 re : fclean all 
 
